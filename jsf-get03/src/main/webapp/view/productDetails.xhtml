@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+<f:metadata>
+    <f:viewParam name="id" value="#{productPage.id}" label="id"/>
+</f:metadata>
+<f:event type="preRenderView" listener="#{productPage.preRenderView}"/>
+
+<h:head>
+    <title>Product Details</title>
+</h:head>
+<h:body>
+    <h1>Product Details</h1>
+    <h:panelGrid id="product" columns="2">
+        <h:outputText value="ID:"/>
+        <h:outputText value="#{productPage.product.id}"/>
+        <h:outputText value="Name:"/>
+        <h:outputText value="#{productPage.product.name}" style="font-weight: bold"/>
+        <h:outputText value="Description:"/>
+        <h:outputText value="#{productPage.product.description}"/>
+        <h:outputText value="Price:"/>
+        <h:outputText value="#{productPage.product.price}"/>
+    </h:panelGrid>
+    <h:link id="edit" outcome="editProduct" includeViewParams="true" value="Edit product"/><br/>
+    <h:link id="back" outcome="productList" value="Back to products"/>
+</h:body>
+</html>
