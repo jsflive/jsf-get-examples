@@ -18,6 +18,8 @@
         <codi.version>1.0.5</codi.version>
         <hibernate.version>4.1.2.Final</hibernate.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <override-web-xml>src/main/jetty/override-myfaces-web.xml</override-web-xml>
     </properties>
 
     <dependencies>
@@ -179,6 +181,7 @@
                 <configuration>
                     <webAppConfig>
                         <contextPath>/${project.artifactId}</contextPath>
+                        <overrideDescriptor>${override-web-xml}</overrideDescriptor>
                     </webAppConfig>
                 </configuration>
             </plugin>

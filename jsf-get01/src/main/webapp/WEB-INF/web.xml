@@ -33,7 +33,7 @@
     </context-param>
 
     <welcome-file-list>
-        <welcome-file>faces/view/productList.xhtml</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
 </web-app>
