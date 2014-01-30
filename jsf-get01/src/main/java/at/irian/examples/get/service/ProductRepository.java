@@ -16,14 +16,14 @@ public class ProductRepository implements Serializable {
 
     @PostConstruct
     void init() {
-        products = new LinkedHashMap<Integer, Product>();
+        products = new LinkedHashMap<>();
         products.put(1000, new Product(1000, "yPod Big", "It's big. It's mean. It's loud.", 90));
         products.put(1001, new Product(1001, "yPod Huge", "It's bigger. It's meaner. It's louder.", 110));
         products.put(1002, new Product(1002, "yPod Beast", "It's massive. It's mean as hell. It's an explosion.", 150));
     }
 
     public List<Product> getProducts() {
-        return new ArrayList<Product>(products.values());
+        return new ArrayList<>(products.values());
     }
 
     public Product getProductById(int id) {

@@ -1,4 +1,4 @@
-package at.irian.examples.get.jsf;
+package at.irian.examples.get.ui.view;
 
 import at.irian.examples.get.domain.Product;
 import at.irian.examples.get.service.ProductRepository;
