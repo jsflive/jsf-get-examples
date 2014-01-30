@@ -11,7 +11,6 @@
     <modules>
         <module>jsf-get01</module>
         <module>jsf-get02</module>
-        <module>jsf-get02-jsf22</module>
         <module>jsf-get03</module>
     </modules>
 
