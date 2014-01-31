@@ -18,7 +18,7 @@ import java.io.Serializable;
 public class ProductPage implements Serializable {
     @Inject
     private ProductRepository productRepository;
-    @Inject @SuppressWarnings("CdiInjectionPointsInspection")
+    @Inject
     private FacesContext facesContext;
     @Inject
     private MessageHelper messageHelper;
@@ -29,7 +29,7 @@ public class ProductPage implements Serializable {
     public void loadProduct() {
         product = productRepository.getProductById(id);
         if (product == null) {
-            messageHelper.addError("Product with id %s not found", id);
+            messageHelper.addError("Product with id {0} not found", id);
         }
     }
 
