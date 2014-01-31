@@ -29,7 +29,7 @@
             <h:inputText id="price" value="#{productPage.product.price}"/>
             <h:message for="price" errorStyle="color: red"/>
         </h:panelGrid>
-        <h:commandButton id="save" action="productDetails?faces-redirect=true&amp;faces-include-view-params=true"/>
+        <h:commandButton id="save" action="#{productPage.saveProduct}"/>
     </h:form>
     <h:link id="back" outcome="productDetails" includeViewParams="true" value="Back to product details"/>
 </h:body>

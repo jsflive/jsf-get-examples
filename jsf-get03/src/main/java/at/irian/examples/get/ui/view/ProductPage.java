@@ -3,6 +3,7 @@ package at.irian.examples.get.ui.view;
 import at.irian.examples.get.domain.Product;
 import at.irian.examples.get.service.ProductRepository;
 import at.irian.examples.get.ui.jsf.MessageHelper;
+import at.irian.examples.get.ui.jsf.Navigate;
 import org.apache.myfaces.extensions.cdi.core.api.scope.conversation.ViewAccessScoped;
 
 import javax.faces.context.FacesContext;
@@ -31,6 +32,10 @@ public class ProductPage implements Serializable {
         if (product == null) {
             messageHelper.addError("Product with id %s not found", id);
         }
+    }
+
+    public String saveProduct() {
+        return Navigate.to("/view/productDetails").withRedirect().withIncludeViewParams().build();
     }
 
     public Product getProduct() {
