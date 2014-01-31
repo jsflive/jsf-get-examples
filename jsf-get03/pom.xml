@@ -15,7 +15,7 @@
         <myfaces.version>2.2.0</myfaces.version>
         <mojarra.version>2.2.5</mojarra.version>
         <owb.version>1.2.1</owb.version>
-        <prettyfaces.version>3.3.3</prettyfaces.version>
+        <rewrite.version>2.0.10.Final</rewrite.version>
         <codi.version>1.0.5</codi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -70,13 +70,6 @@
     </profiles>
 
     <dependencies>
-        <!-- PrettyFaces -->
-        <dependency>
-            <groupId>com.ocpsoft</groupId>
-            <artifactId>prettyfaces-jsf2</artifactId>
-            <version>${prettyfaces.version}</version>
-        </dependency>
-
         <!-- OpenWebBeans -->
         <dependency>
             <groupId>org.apache.openwebbeans</groupId>
@@ -187,6 +180,19 @@
                     <artifactId>validation-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- Rewrite dependencies -->
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-servlet</artifactId>
+            <version>${rewrite.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-integration-faces</artifactId>
+            <version>${rewrite.version}</version>
         </dependency>
 
         <!-- Logging -->
