@@ -8,8 +8,8 @@ import java.text.MessageFormat;
 
 @ApplicationScoped
 public class MessageHelper {
-    @Inject
     @SuppressWarnings("CdiInjectionPointsInspection")
+    @Inject
     private FacesContext facesContext;
 
     public void addError(String message) {

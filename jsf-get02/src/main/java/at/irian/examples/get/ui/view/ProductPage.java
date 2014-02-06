@@ -5,7 +5,6 @@ import at.irian.examples.get.service.ProductRepository;
 import at.irian.examples.get.ui.jsf.MessageHelper;
 import org.apache.myfaces.extensions.cdi.core.api.scope.conversation.ViewAccessScoped;
 
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -18,8 +17,6 @@ import java.io.Serializable;
 public class ProductPage implements Serializable {
     @Inject
     private ProductRepository productRepository;
-    @Inject
-    private FacesContext facesContext;
     @Inject
     private MessageHelper messageHelper;
 
