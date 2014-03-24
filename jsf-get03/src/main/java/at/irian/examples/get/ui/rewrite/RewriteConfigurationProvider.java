@@ -14,8 +14,8 @@ public class RewriteConfigurationProvider extends HttpConfigurationProvider {
     @Override
     public Configuration getConfiguration(ServletContext context) {
         return ConfigurationBuilder.begin()
-                .addRule(Join.path("/product/{/\\d+/ id}/edit").to("/faces/view/editProduct.xhtml"))
-                .addRule(Join.path("/product/{/\\d+/ id}/details").to("/faces/view/productDetails.xhtml"))
+                .addRule(Join.path("/product/{id}/edit").to("/faces/view/editProduct.xhtml"))
+                .addRule(Join.path("/product/{id}/details").to("/faces/view/productDetails.xhtml"))
                 .addRule(Join.path("/products").to("/faces/view/productList.xhtml"));
     }
 
