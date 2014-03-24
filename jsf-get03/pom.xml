@@ -15,7 +15,7 @@
         <myfaces.version>2.2.2</myfaces.version>
         <mojarra.version>2.2.6</mojarra.version>
         <owb.version>1.2.1</owb.version>
-        <rewrite.version>2.0.10.Final</rewrite.version>
+        <rewrite.version>2.0.11.Final</rewrite.version>
         <codi.version>1.0.5</codi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
